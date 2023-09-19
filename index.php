@@ -2,6 +2,31 @@
 
 require_once __DIR__ . '/classes/Movie.php';
 
+// Creazione della prima istanza della classe Movie 
+$movie1 = new Movie ();
+
+// Assegnazione dei valori degli attributi per questa istanza
+$movie1->movie_cover = './img/Taxi-Driver.jpg';
+$movie1->year = 1976;
+$movie1->title = "Taxi Driver";
+$movie1->plot = "Enraged by the moral corruption and urban decay of New York City, a deranged taxi driver goes mad, plots a murder, and saves a young prostitute.";
+$movie1->genre = "Thriller";
+$movie1->director = "Martin Scorzese";
+
+// Creazione della seconda istanza della classe Movie 
+$movie2 = new Movie ();
+
+// Assegnazione dei valori degli attributi per questa istanza
+$movie2->movie_cover = './img/American-Psycho.jpg';
+$movie2->year = 2000;
+$movie2->title = "American Psycho";
+$movie2->plot = "A broker, with statuesque beauty masking his madness, develops a pathological pride in the yuppie lifestyle and indulges in sudden homicidal impulses.";
+$movie2->genre = "Thriller";
+$movie2->director = "Mary Harron";
+
+
+
+
 
 
 
