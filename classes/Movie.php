@@ -2,7 +2,7 @@
 
 class Movie {
 
-    // Dichiarazione attributi della classe Movie 
+    // Dichiarazione proprietà attributi della classe Movie 
 
     public $movie_cover;
     public $year;
@@ -10,6 +10,22 @@ class Movie {
     public $plot;
     public $genre;
     public $director;
+
+    // Dichiarazione costruttore 
+
+    function __construct($_title, $_year) {
+        
+    }
+
+    // Dichiarazione del metodo della classe Movie 
+
+    public function get_my_favourite_movies () {
+
+        return $this->title;
+
+    }
+
+
     
 }
 
