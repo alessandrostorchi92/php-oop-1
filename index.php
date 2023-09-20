@@ -3,7 +3,13 @@
 require_once __DIR__ . '/classes/Movie.php';
 
 // Creazione della prima istanza della classe Movie 
-$movie1 = new Movie ("./img/Taxi-Driver.jpg", 1976, "Taxi Driver", "Enraged by the moral corruption and urban decay of New York City, a deranged taxi driver goes mad, plots a murder, and saves a young prostitute.", "Thriller", "Martin Scorzese");
+$movie1 = new Movie (
+    _movie_cover:"./img/Taxi-Driver.jpg", 
+    _year:1976, 
+    _title:"Taxi Driver", 
+    _plot:"Enraged by the moral corruption and urban decay of New York City, a deranged taxi driver goes mad, plots a murder, and saves a young prostitute.", 
+    _genre:["Thriller"], 
+    _director:"Martin Scorzese");
 
 // Assegnazione dei valori degli attributi per questa istanza e trasferimento dei medesimi nella function__construct()
 
@@ -19,7 +25,13 @@ $movie1 = new Movie ("./img/Taxi-Driver.jpg", 1976, "Taxi Driver", "Enraged by t
 //? var_dump($movie1); OK
 
 // Creazione della seconda istanza della classe Movie
-$movie2 = new Movie ("./img/American-Psycho.jpg", 2000, "American Psycho", "A broker, with statuesque beauty masking his madness, develops a pathological pride in the yuppie lifestyle and indulges in sudden homicidal impulses.", "Thriller", "Mary Harron");
+$movie2 = new Movie (
+    _movie_cover:"./img/American-Psycho.jpg", 
+    _year:2000, 
+    _title:"American Psycho", 
+    _plot:"A broker, with statuesque beauty masking his madness, develops a pathological pride in the yuppie lifestyle and indulges in sudden homicidal impulses.", 
+    _genre:["Thriller"], 
+    _director:"Mary Harron");
 
 // Assegnazione dei valori degli attributi per questa istanza e trasferimento dei medesimi nella function__construct()
 
@@ -36,6 +48,10 @@ $movie2 = new Movie ("./img/American-Psycho.jpg", 2000, "American Psycho", "A br
 
 //Creazione array $movies per il ciclo foreach
 $movies = [$movie1, $movie2];
+
+// Aggiungo generi all'elemento _genre dell'array 
+$movies[0]->addGenre("Drammatico");
+$movies[1]->addGenre("Drammatico");
 
 ?>
 
