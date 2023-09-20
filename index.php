@@ -34,8 +34,8 @@ $movie2 = new Movie ("./img/American-Psycho.jpg", 2000, "American Psycho", "A br
 //TODO Controllo oggetto 2
 //? var_dump($movie2); OK
 
-
-
+//Creazione array $movies per il ciclo foreach
+$movies = [$movie1, $movie2];
 
 ?>
 
@@ -72,7 +72,17 @@ $movie2 = new Movie ("./img/American-Psycho.jpg", 2000, "American Psycho", "A br
 <main>
 
     <div class="container mt-5">
-        
+        <div class="d-flex gap-4">
+
+        <?php
+
+        foreach($movies as $movie) {
+            echo $movie->getHTMLCard();
+        }
+
+        ?>
+
+        </div>
     </div>
 
 </main>
